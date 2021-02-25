@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #586B95;
+    --color-secondary: #864752;
+    --color-text: #2C2C2C;
+    --font-family-text: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-text);
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+main {
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.profile {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.wrapper {
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.line {
+    margin: 3rem 10rem;
+    border: 5px solid var(--color-primary);
+}
+
+.name {
+    color: var(--color-primary);
+    font-size: 5rem;
+    font-style: normal;
+}
+
+.role {
+    color: var(--color-secondary);
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.icon-image {
+    width: 3rem;
+    height: 3rem;
+}
+
+.actions {
+    margin: 2rem 0;
+}
+
+.link-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-item {
+    list-style: none;
+    margin: 0 1rem;
+}
