@@ -66,7 +66,7 @@ const individuals: ServiceDescription[] = [
         ></ServiceCard>
       </v-col>
     </v-row>
-    <h2 class="text-h4">For businesses</h2>
+    <h2 class="text-h4">For organizations</h2>
   </v-container>
 </template>
 
