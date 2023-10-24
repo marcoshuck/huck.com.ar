@@ -3,5 +3,6 @@ export interface ServiceDescription {
   description: string;
   amount: number;
   currency: string;
-  type: 'session' | 'pack' | 'month';
+  type: 'session' | 'pack' | 'month' | 'interview';
+  discount?: number;
 }

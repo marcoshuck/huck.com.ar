@@ -1,72 +1,106 @@
 <script setup lang="ts">
 import ServiceCard from "@/components/ServiceCard.vue";
 import {ServiceDescription} from "@/domain/service_description";
+import {ref} from "vue";
 
 const individuals: ServiceDescription[] = [
   {
+    title: 'Mentorship - 4-hour pack',
+    description: 'Supercharge your career with an extended 4-hour mentorship package. In-depth discussions and guidance will provide you with the tools and insights to drive your long-term professional success.',
+    amount: 180,
+    type: 'month',
+    currency: 'usd',
+    discount: 5,
+  },
+  {
+    title: 'Mentorship - 8-hour pack',
+    description: 'Maximize your career potential with an extensive 8-hour mentorship package. Deep-dive discussions and comprehensive guidance will empower you to achieve significant long-term professional growth and success.',
+    amount: 360,
+    type: 'month',
+    currency: 'usd',
+    discount: 10,
+  },
+  {
     title: 'Test-driven development',
-    description: 'Learn how to implement this strategy to your every-day work. Improve code coverage, reduce bugs and improve your testing and design skills.',
-    amount: 30,
+    description: 'Elevate your software development skills with Test-driven development. Discover the power of implementing this strategy in your daily work. Boost code coverage, minimize bugs, and enhance your testing and design skills.',
+    amount: 20,
     type: 'session',
     currency: 'usd',
   },
   {
     title: 'Go',
-    description: 'Learn the perks of using one the best known programming languages for distributed systems and cloud applications.',
-    amount: 30,
-    type: 'session',
-    currency: 'usd',
-  },
-  {
-    title: 'Design patterns',
-    description: 'Learn how design patterns impact in the industry and how professionally implement them in your engineering work.',
-    amount: 30,
-    type: 'session',
-    currency: 'usd',
-  },
-  {
-    title: 'Software architecture',
-    description: 'Learn how to design highly scalable systems by analyzing the business cases, designing domain rules and summarizing all the information in diagrams.',
-    amount: 30,
+    description: 'Dive into the world of Go, one of the most renowned programming languages for building robust distributed systems and cloud applications. Unlock the potential of Go\'s simplicity and efficiency in our sessions.',
+    amount: 20,
     type: 'session',
     currency: 'usd',
   },
   {
     title: 'Mentorship',
-    description: 'Your career growth is important and having someone to discuss about it will make a difference in the long term.',
+    description: 'Invest in your career\'s long-term success with personalized mentorship. Guided discussions can be the game-changer you need to accelerate your professional growth and achieve your goals.',
     amount: 45,
     type: 'session',
     currency: 'usd',
   },
   {
-    title: 'Mentorship - 4-hour pack',
-    description: 'Your career growth is important and having someone to discuss about it will make a difference in the long term. This pack gives you access to 1 hour of mentorship per week.',
-    amount: 170,
-    type: 'pack',
+    title: 'Protobuf and gRPC',
+    description: 'Join me in exploring the world of gRPC APIs as we follow Google AIPs and collaboratively build production-grade APIs. Unlock the potential of this cutting-edge technology in our sessions.',
+    amount: 35,
+    type: 'session',
     currency: 'usd',
   },
   {
-    title: 'Mentorship - 8-hour pack',
-    description: 'Your career growth is important and having someone to discuss about it will make a difference in the long term. This pack gives you access to 2 hours of mentorship per week.',
-    amount: 325,
-    type: 'pack',
+    title: 'Software design and architecture',
+    description: 'Master the art of crafting highly scalable systems. We\'ll explore real-world business cases, refine domain rules, and encapsulate it all in comprehensive diagrams. Elevate your software engineering skills and apply them to your job.',
+    amount: 35,
+    type: 'session',
     currency: 'usd',
   },
 ];
+
+const organizations: ServiceDescription[] = [
+  {
+    title: 'Technical Interview',
+    description: 'Let me handle the heavy lifting of interviewing your engineering candidates. I\'ll conduct Computer science and Web interviews and deliver a comprehensive summary, providing valuable insights based on your specific criteria.',
+    amount: 50,
+    type: 'interview',
+    currency: 'usd',
+  },
+];
+
+const tab = ref('');
 </script>
 
 <template>
   <v-container>
     <h1 class="text-h2 text-primary">Services</h1>
-    <h2 class="text-h4">For individuals</h2>
-    <v-row class="my-2">
-      <v-col xs="12"  md="6" lg="4" xl="3" :key="index" v-for="(item, index) in individuals">
-        <ServiceCard
-          :descriptor="item"
-        ></ServiceCard>
-      </v-col>
-    </v-row>
-    <h2 class="text-h4">For organizations</h2>
+    <v-tabs v-model="tab" align-tabs="center" fixed-tabs>
+      <v-tab value="individuals">Individuals</v-tab>
+      <v-tab value="organizations">Organizations</v-tab>
+    </v-tabs>
+    <v-window v-model="tab">
+      <v-window-item value="individuals">
+        <v-container>
+          <v-row class="my-2">
+            <v-col xs="12" md="6" lg="4" xl="3" cols="6" :key="index" v-for="(item, index) in individuals">
+              <ServiceCard
+                :descriptor="item"
+              ></ServiceCard>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-window-item>
+      <v-window-item value="organizations">
+        <v-container>
+          <v-row class="my-2">
+            <v-col xs="12" md="6" lg="4" xl="3" cols="6" :key="index" v-for="(item, index) in organizations">
+              <ServiceCard
+                :descriptor="item"
+              ></ServiceCard>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-window-item>
+    </v-window>
   </v-container>
 </template>
 
