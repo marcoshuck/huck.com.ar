@@ -44,7 +44,7 @@ const reviews: Review[] = [
 <template>
   <v-container class="fill-height">
       <v-row align="center" justify="center">
-          <v-col cols="7" class="justify-center">
+          <v-col cols="12" md="8" class="justify-center">
               <h1 class="text-h1 text-center my-2 text-primary">Marcos Huck</h1>
               <h2 class="text-h2 text-center my-2 text-secondary">Full-stack Engineer</h2>
               <p class="text-body-1 my-2">
@@ -69,7 +69,7 @@ const reviews: Review[] = [
               </v-row>
           </v-col>
           <v-spacer></v-spacer>
-          <v-col cols="4">
+          <v-col cols="12" md="4">
               <v-row align="center" justify="center">
                   <v-img class="rounded-circle" src="@/assets/landing_photo.jpg"></v-img>
               </v-row>
@@ -78,7 +78,7 @@ const reviews: Review[] = [
       <v-divider class="my-10"></v-divider>
       <v-row align="stretch" justify="center">
           <v-col cols="12"><h2 class="text-h4 text-secondary">Reviews</h2></v-col>
-          <v-col cols="6" v-for="(review, index) in reviews"  :key="index">
+          <v-col cols="12" sm="4" v-for="(review, index) in reviews"  :key="index">
               <ReviewCard :review="review"></ReviewCard>
           </v-col>
       </v-row>

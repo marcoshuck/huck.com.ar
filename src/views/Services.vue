@@ -6,7 +6,7 @@ import {ref} from "vue";
 const individuals: ServiceDescription[] = [
   {
     title: 'Mentorship - 4-hour pack',
-    description: 'Supercharge your career with an extended 4-hour mentorship package. In-depth discussions and guidance will provide you with the tools and insights to drive your long-term professional success.',
+    description: 'Supercharge your career with an extended 4-hour mentorship package.',
     amount: 180,
     type: 'month',
     currency: 'usd',
@@ -14,7 +14,7 @@ const individuals: ServiceDescription[] = [
   },
   {
     title: 'Mentorship - 8-hour pack',
-    description: 'Maximize your career potential with an extensive 8-hour mentorship package. Deep-dive discussions and comprehensive guidance will empower you to achieve significant long-term professional growth and success.',
+    description: 'Maximize your career potential with an extensive 8-hour mentorship package.',
     amount: 360,
     type: 'month',
     currency: 'usd',
@@ -22,35 +22,42 @@ const individuals: ServiceDescription[] = [
   },
   {
     title: 'Test-driven development',
-    description: 'Elevate your software development skills with Test-driven development. Discover the power of implementing this strategy in your daily work. Boost code coverage, minimize bugs, and enhance your testing and design skills.',
+    description: 'Discover the power of implementing this strategy in your daily work. Boost code coverage, minimize bugs, and enhance your testing and design skills.',
     amount: 20,
     type: 'session',
     currency: 'usd',
   },
   {
     title: 'Go',
-    description: 'Dive into the world of Go, one of the most renowned programming languages for building robust distributed systems and cloud applications. Unlock the potential of Go\'s simplicity and efficiency in our sessions.',
+    description: 'Dive into one of the most renowned programming languages for building robust distributed systems and cloud applications.',
     amount: 20,
     type: 'session',
     currency: 'usd',
   },
   {
     title: 'Mentorship',
-    description: 'Invest in your career\'s long-term success with personalized mentorship. Guided discussions can be the game-changer you need to accelerate your professional growth and achieve your goals.',
+    description: 'Guided discussions can be the game-changer you need to accelerate your professional growth and achieve your goals.',
     amount: 45,
     type: 'session',
     currency: 'usd',
   },
   {
     title: 'Protobuf and gRPC',
-    description: 'Join me in exploring the world of gRPC APIs as we follow Google AIPs and collaboratively build production-grade APIs. Unlock the potential of this cutting-edge technology in our sessions.',
+    description: 'Join me in exploring the world of gRPC APIs as we follow Google AIPs and collaboratively build production-grade APIs.',
     amount: 35,
     type: 'session',
     currency: 'usd',
   },
   {
+    title: 'Docker and Kubernetes',
+    description: 'Explore the synergy of containers and orchestration for seamless application management.',
+    amount: 25,
+    type: 'session',
+    currency: 'usd',
+  },
+  {
     title: 'Software design and architecture',
-    description: 'Master the art of crafting highly scalable systems. We\'ll explore real-world business cases, refine domain rules, and encapsulate it all in comprehensive diagrams. Elevate your software engineering skills and apply them to your job.',
+    description: 'Elevate your software engineering skills and apply them to your job.',
     amount: 35,
     type: 'session',
     currency: 'usd',
@@ -60,9 +67,23 @@ const individuals: ServiceDescription[] = [
 const organizations: ServiceDescription[] = [
   {
     title: 'Technical Interview',
-    description: 'Let me handle the heavy lifting of interviewing your engineering candidates. I\'ll conduct Computer science and Web interviews and deliver a comprehensive summary, providing valuable insights based on your specific criteria.',
-    amount: 50,
+    description: 'By conducting Computer science Web and System design interviews, I can provide valuable insights based on your specific criteria.',
+    amount: 100,
     type: 'interview',
+    currency: 'usd',
+  },
+  {
+    title: 'Third-party integrations',
+    description: 'Simplify your operations by entrusting the task of creating seamless integrations with different services.',
+    amount: 50,
+    type: 'hour',
+    currency: 'usd',
+  },
+  {
+    title: 'Software engineering',
+    description: 'Allow me to handle the development of diverse systems for your company, including automations, APIs, and more.',
+    amount: 50,
+    type: 'hour',
     currency: 'usd',
   },
 ];

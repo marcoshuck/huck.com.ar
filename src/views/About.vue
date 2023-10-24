@@ -23,20 +23,20 @@ const experiences: Experience[] = [
     image: photoMay22,
   },
   {
+    title: 'Sub-operation manager',
+    company: 'Ekumen',
+    department: 'Recruiting: Technical Interviews',
+    startYear: 2022,
+    color: 'secondary',
+  },
+  {
     title: 'UTN Paraná - Workshop co-organizer',
     company: 'Ekumen',
     department: 'Conferences',
     startYear: 2022,
     endYear: 2022,
-    color: 'secondary',
-    image: photoUTN,
-  },
-  {
-    title: 'Sub-operation manager',
-    company: 'Ekumen',
-    department: 'Recruiting',
-    startYear: 2022,
     color: 'primary',
+    image: photoUTN,
   },
   {
     title: 'Semi-Senior Software Engineer (L5)',
