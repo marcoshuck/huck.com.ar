@@ -11,7 +11,7 @@ const reviews: Review[] = [
     text: 'Very good teacher! Lesson was well structured and explanations were simple enough to understand as a beginner.',
   },
   {
-    name: 'Fiverr User',
+    name: 'Anonymous',
     country: 'Azerbaijan',
     flag: '🇦🇿',
     stars: 5,
