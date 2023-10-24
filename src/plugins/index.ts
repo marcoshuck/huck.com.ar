@@ -11,11 +11,16 @@ import router from '../router'
 // Types
 import type { App } from 'vue'
 import gtag from 'vue-gtag'
+import hotjar from 'vue-hotjar'
 
 export function registerPlugins (app: App) {
   app
     .use(vuetify)
     .use(router)
+    .use(hotjar, {
+      id: '3706798',
+      snippetVersion: 6,
+    })
     .use(gtag, {
       appName: 'Marcos Huck - Website',
       pageTrackerScreenviewEnabled: true,
