@@ -68,7 +68,7 @@ const organizations: ServiceDescription[] = [
   {
     title: 'Technical Interview',
     description: 'By conducting Computer science Web and System design interviews, I can provide valuable insights based on your specific criteria.',
-    amount: 100,
+    amount: 75,
     type: 'interview',
     currency: 'usd',
   },
