@@ -8,7 +8,7 @@
     --color-primary: #00ADD8;
     --color-secondary: #CE3262;
     --color-text: #2C2C2C;
-    --font-family-text: 'Roboto', sans-serif;
+    --font-family-text: Roboto, sans-serif;
 }
 
 body {
@@ -48,15 +48,24 @@ main {
     font-style: normal;
 }
 
+.description {
+    font-family: Montserrat, serif;
+}
+
 .icon-image {
     width: 3rem;
     height: 3rem;
+}
+
+.icon-image:hover {
+    filter: brightness(85%);
 }
 
 .link-list {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .link-item {
@@ -64,7 +73,33 @@ main {
     margin: 0 1rem;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 1rem; /* Add some space between buttons */
+    margin-top: 1.5rem; /* Add space between icons and buttons */
+}
+
+.btn {
+    background-color: var(--color-primary); /* Use your primary color */
+    color: white;
+    border: none;
+    padding: 0.9rem 1.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: var(--font-family-text), serif;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    filter: brightness(85%);
+}
+
+.secondary-btn {
+    background-color: var(--color-secondary);
+}
+
 @media only screen and (min-width: 600px) {
     body {
         font-size: 1.5rem;
@@ -95,6 +130,15 @@ main {
     .icon-image {
         width: 5rem;
         height: 5rem;
+    }
+
+    .link-list {
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -127,5 +171,14 @@ main {
     .icon-image {
         width: 5rem;
         height: 5rem;
+    }
+
+    .link-list {
+        margin-bottom: 3rem;
+    }
+
+    .btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.8rem;
     }
 }
