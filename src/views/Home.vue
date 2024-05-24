@@ -48,7 +48,7 @@ const reviews: Review[] = [
         <h1 class="text-h1 text-center my-2 text-primary">Marcos Huck</h1>
         <h2 class="text-h2 text-center my-2 text-secondary">Software Engineer & Mentor</h2>
         <p class="text-body-1 my-2">
-          My missions is to empower businesses with scalable, innovative software solutions that transform ideas and
+          My mission is to empower businesses with scalable, innovative software solutions that transform ideas and
           drive growth. I also enjoy mentoring software engineers to master advanced technologies and build fulfilling
           careers.
         </p>
