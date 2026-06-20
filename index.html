@@ -22,47 +22,222 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="wrapper">
-        <img class="profile" src="img/profile.jpg" alt="Profile image" width="200" height="200" />
-        <div class="name">
-            Marcos Huck
-        </div>
-        <div class="role">
-            Software Engineer & Mentor
-        </div>
+    <main class="wrapper" aria-label="Profile Summary">
+        <header>
+            <img class="profile" src="img/profile.jpg" alt="Marcos Huck's profile picture" width="200" height="200" />
+            <h1 class="name">Marcos Huck</h1>
+            <p class="role">Software Engineer & Mentor</p>
+        </header>
         <p class="description">
-            My mission is to empower businesses with scalable, innovative software solutions that transform ideas and drive growth. I also enjoy mentoring software engineers to master advanced technologies and build fulfilling careers.
+            My mission is to empower businesses with scalable, innovative solutions that transform ideas and drive growth. I also enjoy mentoring people to master advanced technologies and build fulfilling careers.
         </p>
         <div class="actions">
-            <div class="link-list">
-                <div class="button-container">
-                    <a class="btn" href="https://bit.ly/marcoshuck-virtual-coffee">Let's talk</a>
-                    <!-- <a class="btn secondary-btn">Services</a> -->
-                </div>
-            </div>
-            <div class="link-list">
+            <nav class="button-list" aria-label="Primary Actions">
+                <a class="btn" href="https://bit.ly/marcoshuck-virtual-coffee">Let's talk</a>
+                <a class="btn secondary-btn" href="#services">Services</a>
+            </nav>
+            <nav class="social-links" aria-label="Social Media Links">
                 <div class="link-item">
-                    <a class="icon-link" href="https://linkedin.com/in/marcoshuck" target="_blank" aria-label="Linkedin">
-                        <img class="icon-image" src="img/linkedin.svg" alt="Linkedin" title="LinkedIn" height="64" width="64">
+                    <a class="icon-link" href="https://linkedin.com/in/marcoshuck" target="_blank" aria-label="LinkedIn">
+                        <img class="icon-image" src="img/linkedin.svg" alt="" title="LinkedIn" height="64" width="64">
                     </a>
                 </div>
                 <div class="link-item">
                     <a class="icon-link" href="mailto:marcos@huck.com.ar" target="_blank" aria-label="Email">
-                        <img class="icon-image" src="img/email.svg" alt="Email" title="Email" height="64" width="64">
+                        <img class="icon-image" src="img/email.svg" alt="" title="Email" height="64" width="64">
                     </a>
                 </div>
                 <div class="link-item">
                     <a class="icon-link" href="https://github.com/marcoshuck" target="_blank" aria-label="GitHub">
-                        <img class="icon-image" src="img/github.svg" alt="GitHub" title="GitHub" height="64" width="64">
+                        <img class="icon-image" src="img/github.svg" alt="" title="GitHub" height="64" width="64">
                     </a>
                 </div>
                 <div class="link-item">
                     <a class="icon-link" href="https://gitlab.com/marcoshuck" target="_blank" aria-label="GitLab">
-                        <img class="icon-image" src="img/gitlab.svg" alt="GitLab" title="GitLab" height="64" width="64">
+                        <img class="icon-image" src="img/gitlab.svg" alt="" title="GitLab" height="64" width="64">
                     </a>
+                </div>
+            </nav>
+        </div>
+        <div class="scroll-down">
+            <a href="#resume" class="scroll-down-arrow" aria-label="Scroll to next section">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </main>
+    <section id="resume" class="wrapper content-section" aria-labelledby="resume-title">
+        <h2 id="resume-title" class="section-title">Resumé</h2>
+        <div class="resume-grid">
+            <div class="resume-section">
+                <h3>Experience</h3>
+                <div class="resume-list">
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <strong>Senior Software Engineer (L6 to L7)</strong> @ <a href="http://ekumenlabs.com/">Ekumen</a>
+                        </div>
+                        <div class="resume-entry-description">
+                            Leading cloud-native robotics infrastructure and simulation platforms. Acting as a technical reference and mentor for the engineering team.
+                        </div>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <strong>Semi-Senior Software Engineer (L4 to L5)</strong> @ <a href="http://ekumenlabs.com/">Ekumen</a>
+                        </div>
+                        <div class="resume-entry-description">
+                            Designed and implemented scalable backend systems using Go, gRPC, and Kubernetes. Contributed to open-source robotics tools and CI/CD pipelines.
+                        </div>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <strong>Junior Software Engineer (L3)</strong> @ <a href="http://ekumenlabs.com/">Ekumen</a>
+                        </div>
+                        <div class="resume-entry-description">
+                            Focused on robotics simulation quality metrics and automation for ROS/Gazebo environments, transitioning into a full-stack engineering role.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-section">
+                <h3>Skills & Education</h3>
+                <div class="skills">
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Bazel</span>
+                    <span class="skill-tag">gRPC</span>
+                    <span class="skill-tag">Go</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Software Architecture</span>
+                    <span class="skill-tag">Mentoring</span>
+                    <span class="skill-tag">System Design</span>
+                    <span class="skill-tag">Interviewing</span>
+                </div>
+                <div class="education-list">
+                    <div class="education-item">
+                        <strong>B.S. Electronics</strong> @ UTN
+                    </div>
+                    <div class="education-item">
+                        <strong>A.S. Software Development</strong> @ ISSD
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+        <p class="resume-footer">
+            Want to see my full professional history? Visit my <a href="https://linkedin.com/in/marcoshuck" target="_blank" rel="noopener">LinkedIn profile</a>.
+        </p>
+        <div class="scroll-down">
+            <a href="#conferences" class="scroll-down-arrow" aria-label="Scroll to next section">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+    <section id="conferences" class="wrapper content-section" aria-labelledby="conferences-title">
+        <h2 id="conferences-title" class="section-title">Conferences</h2>
+        <p>Stay tuned for upcoming conferences and talks!</p>
+        <div class="coming-soon">Coming Soon</div>
+        <div class="scroll-down">
+            <a href="#services" class="scroll-down-arrow" aria-label="Scroll to next section">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+    <section id="services" class="wrapper content-section" aria-labelledby="services-title">
+        <h2 id="services-title" class="section-title">Services</h2>
+        <p>Explore the services I offer to help you and your business grow.</p>
+        <div class="coming-soon">Coming Soon</div>
+        <div class="scroll-down">
+            <a href="#mentoring" class="scroll-down-arrow" aria-label="Scroll to next section">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+    <section id="mentoring" class="wrapper content-section" aria-labelledby="mentoring-title">
+        <h2 id="mentoring-title" class="section-title">Mentoring</h2>
+        <p class="description">
+            Helping engineers achieve technical excellence and career success through personalized guidance and real-world expertise.
+        </p>
+
+        <div class="mentoring-grid">
+            <div class="mentoring-section">
+                <h3>What I Offer</h3>
+                <div class="mentoring-list">
+                    <div class="mentoring-item">
+                        <strong>🚀 Career Guidance</strong>
+                        <p>Personalized roadmaps, career progression strategies, and interview preparation.</p>
+                    </div>
+                    <div class="mentoring-item">
+                        <strong>💻 Technical Expertise</strong>
+                        <p>Software architecture, distributed systems, Docker, Kubernetes, and CS fundamentals.</p>
+                    </div>
+                    <div class="mentoring-item">
+                        <strong>🌟 Soft Skills</strong>
+                        <p>Effective communication, work planning, and achieving sustainable work-life balance.</p>
+                    </div>
+                </div>
+                <h3 class="pricing-title">Why work with me?</h3>
+                <p class="mentoring-description">
+                    As a Senior SWE at Ekumen, I've designed learning paths and mentored dozens of engineers. I bring real-world expertise from building complex distributed systems to help you grow.
+                </p>
+            </div>
+
+            <div class="mentoring-section">
+                <h3>How it Works</h3>
+                <div class="mentoring-steps">
+                    <div class="step-item">
+                        <strong>1. Introductory Meeting</strong>
+                        <p>We discuss your goals, strengths, and current challenges.</p>
+                    </div>
+                    <div class="step-item">
+                        <strong>2. Customized Plan</strong>
+                        <p>We craft a personalized growth plan tailored to your needs.</p>
+                    </div>
+                    <div class="step-item">
+                        <strong>3. Flexible Sessions</strong>
+                        <p>Choose a schedule that fits: monthly, bi-weekly, or weekly.</p>
+                    </div>
+                </div>
+
+                <h3 class="pricing-title">Pricing & Policies</h3>
+                <div class="pricing-list">
+                    <div class="pricing-entry"><span>Single Session</span> <strong>$45 USD</strong></div>
+                    <div class="pricing-entry"><span>4-Hour Pack</span> <strong>$170 USD</strong></div>
+                    <div class="pricing-entry"><span>8-Hour Pack</span> <strong>$325 USD</strong></div>
+                </div>
+                <div class="mentoring-meta">
+                    <p>Payments: Payoneer, PayPal, Fiverr</p>
+                    <p>Policy: 12h rescheduling notice</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="mentoring-footer">
+            Ready to start your journey? <a href="https://bit.ly/marcoshuck-virtual-coffee" aria-label="Book a call with Marcos for mentoring">Let's talk</a>
+        </p>
+    </section>
+
+    <a href="#" class="back-to-top" title="Back to the top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-svg">
+            <polyline points="6 15 12 9 18 15"></polyline>
+        </svg>
+    </a>
+
+    <script>
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight * 0.5) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>
