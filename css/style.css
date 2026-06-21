@@ -42,7 +42,7 @@ body {
 }
 
 main,
-.content-section {
+.content {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -50,10 +50,10 @@ main,
     align-items: center;
     text-align: center;
     position: relative;
-    padding: 2rem;
+    padding: 2rem 2rem 8rem;
 }
 
-.content-section {
+.content {
     border-top: 1px solid #eee;
 }
 
@@ -81,7 +81,7 @@ main,
     max-width: 700px;
 }
 
-.section-title {
+.title {
     color: var(--color-primary);
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -255,8 +255,8 @@ main,
 /******************************************************************************
  * Section - Resume & Mentoring
  *****************************************************************************/
-.resume-grid,
-.mentoring-grid {
+.grid.resume,
+.grid.mentoring {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -295,41 +295,40 @@ main,
     text-decoration: underline;
 }
 
-.resume-list,
-.mentoring-list,
-.mentoring-steps {
+.list,
+.steps {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-.resume-entry-header,
-.mentoring-item strong,
-.step-item strong {
+.entry-header,
+.item strong,
+.step strong {
     font-size: 0.95rem;
     display: block;
     margin-bottom: 0.2rem;
 }
 
-.resume-entry-description,
-.mentoring-item p,
-.step-item p,
-.mentoring-description,
-.mentoring-meta {
+.entry-desc,
+.item p,
+.step p,
+.desc,
+.meta {
     font-size: 0.9rem;
     line-height: 1.4;
     margin: 0;
 }
 
-.mentoring-description {
+.desc {
     margin-top: 0.5rem;
 }
 
-.mentoring-meta {
+.meta {
     margin-top: 1rem;
 }
 
-.mentoring-meta p {
+.meta p {
     margin: 0.2rem 0;
     font-style: italic;
     font-size: 0.85rem;
@@ -361,7 +360,7 @@ main,
     margin-bottom: 1.5rem;
 }
 
-.skill-tag {
+.skill {
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
     padding: 0.3rem 0.8rem;
@@ -402,7 +401,7 @@ main,
 /******************************************************************************
  * Section - Services
  *****************************************************************************/
-.services-container {
+.services-list {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -412,7 +411,7 @@ main,
     margin-bottom: 2rem;
 }
 
-.services-subtitle {
+.subtitle {
     color: var(--color-secondary);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
@@ -421,49 +420,56 @@ main,
     font-weight: 500;
 }
 
-.services-grid.matrix {
+.grid.matrix {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
-.service-card {
-    background-color: #fcfcfc;
+.card {
+    background-color: #fff;
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-.service-card strong {
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card strong {
     color: var(--color-primary);
     font-weight: 500;
 }
 
-.service-card p {
+.card p {
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 0;
 }
 
-.roadmap-intro {
+.intro {
     font-size: 1rem;
     margin-bottom: 2rem;
     max-width: 800px;
 }
 
-.services-roadmap {
+.roadmap .steps {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.roadmap-step {
+.roadmap .step {
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
 }
 
-.step-number {
+.number {
     background-color: var(--color-primary);
     color: white;
     width: 2.5rem;
@@ -476,22 +482,15 @@ main,
     flex-shrink: 0;
 }
 
-.step-content strong {
+.details strong {
     color: var(--color-primary);
     font-weight: 500;
 }
 
-.step-content p {
+.details p {
     font-size: 0.95rem;
     line-height: 1.4;
     margin: 0;
-}
-
-.highlight-step {
-    background-color: #f0f9ff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1px dashed var(--color-primary);
 }
 
 /******************************************************************************
@@ -517,7 +516,7 @@ main,
         font-size: 1.8rem;
     }
 
-    .section-title {
+    .title {
         font-size: 2.5rem;
     }
 
@@ -544,21 +543,21 @@ main,
 
 /* Desktop (min-width: 768px) */
 @media only screen and (min-width: 768px) {
-    .services-grid.matrix {
+    .grid.matrix {
         grid-template-columns: 1fr 1fr;
     }
 
-    .resume-grid,
-    .mentoring-grid {
+    .grid.resume,
+    .grid.mentoring {
         grid-template-columns: 1.5fr 1fr;
         gap: 3rem;
     }
 
-    .resume-entry-header {
+    .entry-header {
         font-size: 1.05rem;
     }
 
-    .resume-entry-description,
+    .entry-desc,
     .education-item,
     .resume-footer {
         font-size: 1rem;
@@ -572,8 +571,8 @@ main,
     }
 
     main,
-    .content-section {
-        padding: 3rem 2rem;
+    .content {
+        padding: 3rem 2rem 10rem;
     }
 
     .profile {
@@ -589,7 +588,7 @@ main,
         font-size: 2.2rem;
     }
 
-    .section-title {
+    .title {
         font-size: 3rem;
     }
 
