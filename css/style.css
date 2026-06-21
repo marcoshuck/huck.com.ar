@@ -400,6 +400,101 @@ main,
 }
 
 /******************************************************************************
+ * Section - Services
+ *****************************************************************************/
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.services-subtitle {
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.services-grid.matrix {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #fcfcfc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service-card strong {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.roadmap-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.services-roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.roadmap-step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    background-color: var(--color-primary);
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content strong {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.step-content p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.highlight-step {
+    background-color: #f0f9ff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px dashed var(--color-primary);
+}
+
+/******************************************************************************
  * Media Queries
  *****************************************************************************/
 
@@ -449,6 +544,10 @@ main,
 
 /* Desktop (min-width: 768px) */
 @media only screen and (min-width: 768px) {
+    .services-grid.matrix {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .resume-grid,
     .mentoring-grid {
         grid-template-columns: 1.5fr 1fr;
